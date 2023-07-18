@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div id="app">
+	<h2>{{person.name}}-{{person.age}}</h2>
+	<h2>{{person.age}}</h2>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<span>{{msg}}</span>
+	<p v-html="htmlStr"></p>
+	<p v-text="person.name" :class="test"></p>
+	<p v-text="msg"></p>
+	<input type="text" v-model="msg">
+	<button v-on:click="handClick">按钮on</button>
+	<button @click="handClick">按钮@</button>
+	<img v-bind:src="./timg.jpg"  style="width: 100px"/>
+	<img :src="./timg.jpg"  style="width: 100px"/>
+	<p>{{arr}}</p>
+	<dl>
+		<!--<dt>123</dt>-->
+		<dd>5</dd>
+		<dd>6</dd>
+	</dl>
+</div>
+<script src="./mvvm/bundle.js"></script>
+</body>
+</html>

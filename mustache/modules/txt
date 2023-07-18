@@ -1,0 +1,23 @@
+["text", "<h1>你好,我是"]
+["name", "name"]
+["text", "</h1><ul>"]
+["#", "arr"]
+["text", "<li>.</li>"]
+["/", "arr"]
+["text", "</ul>"]
+
+collect:                    nested:                           sections:
+["text", "<h1>你好,我是"]            ["text", "<h1>你好,我是"]             [["#", "arr"]]
+["name", "name"]                    ["name", "name"]
+["text", "</h1><ul>"]               ["text", "</h1><ul>"]
+["#", "arr"]                        ["#", "arr"]
+                                      ↓
+[]                                  ["text", "<h1>你好,我是"]             [["#", "arr",[]]]
+                                    ["name", "name"]
+                                    ["text", "</h1><ul>"]
+                                    ["#", "arr",[]]
+                                      ↓
+[["text", "<li>.</li>"]]            ["text", "<h1>你好,我是"]             [["#", "arr",[]]]
+                                    ["name", "name"]
+                                    ["text", "</h1><ul>"]
+                                    ["#", "arr",["text", "<li>.</li>"]]  [["#", "arr",["text", "<li>.</li>"]]]
